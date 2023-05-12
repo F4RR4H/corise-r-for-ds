@@ -104,7 +104,7 @@ tbl_names_popular |>
   facet_wrap(~ sex, scales = "free_y") +
   # Add labels (title, subtitle, caption, x, y)
   labs(
-    title = 'Popular Baby Names Bar Chart',
+    title = 'Popular Baby Names',
     subtitle = 'Years: 2011 to 2020',
     caption = 'Source: SSA',
     x = '# of births',
