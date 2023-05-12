@@ -529,9 +529,9 @@ get_letter_type <- function(letter) {
 
 tbl_names_vowel_consonant <- tbl_names |> 
   # Add NEW column named `first_letter_type`
-  mutate(first_letter_type = get_letter_type(str_sub(name, 1, 1))) |>
+  mutate(first_letter_type = get_letter_type(first_letter)) |>
   # Add NEW column named `last_letter_type`
-  mutate(last_letter_type = get_letter_type(str_sub(name, -1))) |>
+  mutate(last_letter_type = get_letter_type(last_letter)) |>
   # Group by `sex`, `year`, `first_letter_type` and `last_letter_type`
   group_by(sex, year, first_letter_type, last_letter_type) |>
   # Summarize the total number of births
@@ -551,20 +551,20 @@ tbl_names_vowel_consonant <- tbl_names |>
 tbl_names_vowel_consonant
 ```
 
-    #> # A tibble: 568 × 5
+    #> # A tibble: 1,136 × 5
     #>    sex    year first_last           nb_births_total pct_births
     #>    <chr> <dbl> <chr>                          <dbl>      <dbl>
-    #>  1 F      1880 consonant, consonant           66753      0.734
-    #>  2 F      1880 vowel, consonant               24241      0.266
-    #>  3 F      1881 consonant, consonant           67356      0.733
-    #>  4 F      1881 vowel, consonant               24597      0.267
-    #>  5 F      1882 consonant, consonant           79010      0.733
-    #>  6 F      1882 vowel, consonant               28837      0.267
-    #>  7 F      1883 consonant, consonant           81931      0.729
-    #>  8 F      1883 vowel, consonant               30388      0.271
-    #>  9 F      1884 consonant, consonant           94180      0.730
-    #> 10 F      1884 vowel, consonant               34839      0.270
-    #> # ℹ 558 more rows
+    #>  1 F      1880 consonant, consonant           19988     0.220 
+    #>  2 F      1880 consonant, vowel               46765     0.514 
+    #>  3 F      1880 vowel, consonant                5708     0.0627
+    #>  4 F      1880 vowel, vowel                   18533     0.204 
+    #>  5 F      1881 consonant, consonant           20069     0.218 
+    #>  6 F      1881 consonant, vowel               47287     0.514 
+    #>  7 F      1881 vowel, consonant                5669     0.0617
+    #>  8 F      1881 vowel, vowel                   18928     0.206 
+    #>  9 F      1882 consonant, consonant           23561     0.218 
+    #> 10 F      1882 consonant, vowel               55449     0.514 
+    #> # ℹ 1,126 more rows
 
 #### Visualize
 
