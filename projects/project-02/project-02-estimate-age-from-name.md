@@ -22,6 +22,7 @@ Let us start by reading in the baby names data from `data/names.csv.gz`.
 
 ``` r
 # Load the tidyverse package
+
 library(tidyverse)
 
 # Read data/names.csv.gz into a data frame named `tbl_names`
@@ -412,7 +413,7 @@ tbl_names_extended_age |>
     linewidth = 5
   ) +
   # Add a point layer:
-  geom_point(size = 2, color = "yellow") +
+  geom_point(size = 2, color = "purple") +
   # Add labels (title, subtitle, x, y)
   labs(
     title = "Age Distribution for Top 25 Female Names",
