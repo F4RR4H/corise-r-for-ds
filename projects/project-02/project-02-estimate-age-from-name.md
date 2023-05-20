@@ -22,17 +22,14 @@ Let us start by reading in the baby names data from `data/names.csv.gz`.
 
 ``` r
 # Load the tidyverse package
-
 library(tidyverse)
 
 # Read data/names.csv.gz into a data frame named `tbl_names`
-
 file_name <- here::here("data/names.csv.gz")
 tbl_names <- readr::read_csv(file_name, show_col_types = FALSE)
 
 
 # Print tbl_names
-
 tbl_names
 ```
 
