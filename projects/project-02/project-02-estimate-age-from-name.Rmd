@@ -7,7 +7,7 @@ output: github_document
 library(tidyverse)
 knitr::opts_chunk$set(
   echo = TRUE,
-  eval = FALSE,
+  eval = TRUE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "img/",
@@ -383,7 +383,7 @@ tbl_names_extended_age |>
     linewidth = 5
   ) +
   # Add a point layer:
-  geom_point(size = 2, color = "purple") +
+  geom_point(size = 2, color = "yellow") +
   # Add labels (title, subtitle, x, y)
   labs(
     title = "Age Distribution for Top 25 Female Names",
